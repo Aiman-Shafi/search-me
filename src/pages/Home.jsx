@@ -3,7 +3,7 @@ import useFetch from "../hooks/useFetch";
 
 export default function Home() {
   const [searchTerm, setSearchTerm] = useState("javascript");
-  const [results, loading, getResults] = useFetch(); // Ensure correct order: [results, loading, getResults]
+  const [results, loading, getResults] = useFetch();
 
   useEffect(() => {
     const controller = new AbortController();
@@ -38,6 +38,7 @@ export default function Home() {
                   {title}
                 </p>
               </a>
+              <hr className="my-3" />
             </div>
           )
         )
